@@ -96,15 +96,15 @@ nav{
 .title-content{
     height: 800px;
     position: relative;
-    top: 15%;
+    top: 20%;
 }
 
 .title {
     width: 100%;
-    font-family: 'Playfair-Display', serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     font-weight: 300;
-    font-size: 12.5em;
+    font-size: 11em;
     font-style: italic;
     position: absolute;
     top: 0px;
@@ -118,7 +118,7 @@ nav{
     text-align: center;
     font-weight: 200;
     position: absolute;
-    top: 190px;
+    top: 200px;
 }
 
 .button {
