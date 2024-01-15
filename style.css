@@ -143,7 +143,7 @@ nav{
 }
 
 
-.sec-1{
+#sec-1{
     width: 100%;
     display: flex;
 }
@@ -173,7 +173,7 @@ a{
     color: whitesmoke;
 }
 
-p{
+.home-p{
     font-family: 'inter tight', serif;
     font-weight: 300;
     font-size: 1.5em;
@@ -192,7 +192,7 @@ blockquote {
     margin: 0em;
 }
 
-.sec-2{
+#sec-2{
     width: 100%;
     height: 1100px;
     margin: auto;
@@ -227,7 +227,7 @@ figcaption{
     text-align: center;
 }
 
-.sec-3{
+#sec-3{
     width: 100%;
     height: 650px;
     background-image: url(assets/newsletter.jpg);
@@ -239,6 +239,7 @@ figcaption{
 
 .newsletter{
     width: 650px;
+    height: 100px;
     position: relative;
     top: 200px;
 }
@@ -266,15 +267,18 @@ figcaption{
 
 .ingreso-email{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 650px;
     background-color: whitesmoke;
     padding: 20px 30px;
-    color: black;
-    text-align: left;
-    margin-top: 100px;
+    color: rgb(16, 16, 16);
+    margin: 100px 0;
     font-family: 'inter-tight', sans-serif;
     font-size: 1.5em;
     font-weight: 200;
     border-radius: 10px;
+
 }
 
 footer{
@@ -283,35 +287,32 @@ footer{
     background-color: rgb(16, 16, 16);
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-family: 'inter-tight', sans-serif;
     color: whitesmoke;
     font-weight: 200;
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 150px;
 }
 
 .footer-cont{
     width: 100%;
-    display: block;
-
-}
-
-.txt-footer{
-    line-height: 1px;
+    display: flex;
+    line-height: 2em;
+    align-items: center;
+    margin-left: 5em;
 }
 
 .left{
     display: block;
     justify-content: left;
     text-align: left;
-    margin-left: 10em;
 }
 
 .right{
     display: block;
     justify-content: center;
     text-align: center;
-    line-height: 1px;
 }
 
 .footer-logo {
@@ -321,9 +322,14 @@ footer{
 }
 
 .fa-brands{
-    padding: 0 20px 0 0;
+    width: 80px;
 }
 
-.txt-footer-link{
-    margin: -110px;
+.brands {
+    height: 100;
+    margin-bottom: 50px;
+}
+
+.fa-x-twitter:before{
+    height: 20%;
 }
