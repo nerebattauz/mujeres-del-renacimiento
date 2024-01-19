@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --color-negro: rgb(16, 16, 16);
+    --color-hover: rgb(219, 70, 36);
+    --color-blanco: whitesmoke;
+}
+
+
 * {
     margin:0;
     padding: 0;
@@ -14,7 +21,16 @@ body{
     background-position: 0 -200px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(16, 16, 16);
+    background-color: var(--color-negro);
+}
+
+body::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 195vh;
+    background-image: linear-gradient(180deg, rgba(16, 16, 16, 0.266), 50%,rgb(16, 16, 16));
 }
 
 header {
@@ -22,16 +38,22 @@ header {
     height: 100vh;
 }
 
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 nav{
     width: 100%;
-    height: 60px;
+    height: 3em;
     font-family: 'Inter Tight', sans-serif;
     background-color: rgb(16, 16, 16);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav-logo-cont{
@@ -43,7 +65,7 @@ nav{
 }
 
 .nav-logo {
-    height: 30px;
+    height: 25px;
     display: flex;
 }
 
@@ -61,8 +83,12 @@ nav{
     text-decoration: none;
     justify-content: center;
     color: whitesmoke;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 400;
+}
+
+.nav-text:hover {
+    color: var(--color-hover);
 }
 
 .nav-button-cont {
@@ -79,10 +105,14 @@ nav{
     align-items: center;
     justify-content: center;
     color: whitesmoke;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 400;
     font-style: italic;
     text-decoration: underline;
+}
+
+.nav-button:hover {
+    color: var(--color-hover);
 }
 
 .hero-content{
@@ -94,9 +124,9 @@ nav{
 }
 
 .title-content{
-    height: 800px;
+    height: 600px;
     position: relative;
-    top: 20%;
+    top: 15%;
 }
 
 .title {
@@ -104,29 +134,29 @@ nav{
     font-family: 'Playfair Display', serif;
     text-align: center;
     font-weight: 300;
-    font-size: 11em;
+    font-size: 10em;
     font-style: italic;
     font-stretch: narrower;
     position: absolute;
-    top: 0px;
+    top: 0%;
 }
 
 .main-subtitle {
     width: 100%;
     font-family: 'inter-tight', sans-serif;
-    font-size: 3.8em;
+    font-size: 3.5em;
     font-style: normal;
     text-align: center;
     font-weight: 200;
     position: absolute;
-    top: 200px;
+    top: 30%;
 }
 
 .button {
     width: 100%;
     position: absolute;
     text-align: center;
-    top: 300px;
+    top: 45%;
 }
 
 .button-text{
@@ -134,7 +164,7 @@ nav{
     background-color: rgb(16, 16, 16);
     font-family: 'inter-tight', sans-serif;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.7em;
     font-style: normal;
     text-align: center;
     font-weight: 200;
@@ -142,6 +172,9 @@ nav{
     border-radius: 50px;
 }
 
+.button-text:hover {
+    background-color: var(--color-hover);
+}
 
 #sec-1{
     width: 100%;
@@ -152,34 +185,30 @@ nav{
     margin: auto;
     background-color: rgb(16, 16, 16);
     color: whitesmoke;
-    width: 800px;
-    height: 1350px;
+    width: 50em;
+    height: 65em;
     border-radius: 50px;
     justify-content: center;
     padding: 90px;
+    z-index: 1;
 }
 
 .subtitle{
     font-family: 'playfair display', serif;
     text-align: center;
     font-weight: 400;
-    font-size: 3em;
-    margin-bottom: 40px;
-    color: whitesmoke;
-}
-
-a{
-    text-decoration: none;
+    font-size: 2.5em;
+    margin-bottom: 1em;
     color: whitesmoke;
 }
 
 .home-p{
     font-family: 'inter tight', serif;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.5em;
     white-space: normal;
-    margin: 40px 0;
+    margin: 1.5em 0;
 }
 
 blockquote {
@@ -189,30 +218,33 @@ blockquote {
     line-height: 1.5em;
     font-weight: 400;
     font-size: 1.9em;
-    margin: 0em;
+    margin-top: 2em;
 }
 
 #sec-2{
     width: 100%;
     height: 1100px;
     margin: auto;
-    color: whitesmoke;
+    color: var(--color-blanco);
     justify-content: center;
     padding: 90px;
 }
 
 .gallery {
     display: flex;
-    margin: auto;
-    background-color: rgb(16, 16, 16);
-    color: whitesmoke;
-    width: 1000px;
+    justify-content: center;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 figure{
-    height: 300px;
-    width: 300px;
+    height: 20em;
+    width: 15em;
     margin: 30px;
+}
+
+figure:hover{
+    color: var(--color-hover);
 }
 
 .img-gallery{
@@ -223,7 +255,7 @@ figure{
 
 figcaption{
     font-family: 'inter tight', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
 }
 
@@ -237,25 +269,23 @@ figcaption{
     justify-content: center;
 }
 
-.newsletter{
+.email-revista{
     width: 650px;
     height: 100px;
     position: relative;
     top: 200px;
 }
 
-.text-newsletter1{
-    display: flex;
-    justify-content: center;
+.text-email1{
+    text-align: center;
     width: 100%;
     font-family: 'inter-tight', sans-serif;
     font-size: 4em;
     font-weight: 200;
 }
 
-.text-newsletter2{
-    display: flex;
-    justify-content: center;
+.text-email2{
+    text-align: center;
     width: 100%;
     font-family: 'playfair display', serif;
     font-size: 8em;
@@ -265,20 +295,34 @@ figcaption{
     line-height: 40px;
 }
 
-.ingreso-email{
+.cont-email{
+    position: relative;
+    top: 5em;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 650px;
-    background-color: whitesmoke;
+    color: var(--color-negro);
+    width: 90%;
+    height: 4em;
+    border-radius: 10px;
+    background-color: var(--color-blanco);
+    border: none;
     padding: 20px 30px;
-    color: rgb(16, 16, 16);
-    margin: 100px 0;
+    color: gray;
+}
+
+.arrow{
+    color: gray;
+}
+
+.input-email{
+    background-color: var(--color-blanco);
     font-family: 'inter-tight', sans-serif;
     font-size: 1.5em;
     font-weight: 200;
-    border-radius: 10px;
-
+    width: 15em;
+    border: none;
 }
 
 footer{
@@ -291,7 +335,7 @@ footer{
     font-family: 'inter-tight', sans-serif;
     color: whitesmoke;
     font-weight: 200;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 150px;
 }
 
@@ -315,10 +359,13 @@ footer{
     text-align: center;
 }
 
+.txt-footer-link:hover{
+    color: var(--color-hover);
+}
+
 .footer-logo {
     width: 150px;
     margin-bottom: 1.5em;
-
 }
 
 .fa-brands{
@@ -330,6 +377,7 @@ footer{
     margin-bottom: 50px;
 }
 
-.fa-x-twitter:before{
-    height: 20%;
+i:hover{
+    color: var(--color-hover);
 }
+
